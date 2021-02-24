@@ -8,11 +8,13 @@ import SEO from "../components/seo"
 
 import Carousel from "react-bootstrap/Carousel"
 import Button from "react-bootstrap/Button"
+import CardDeck from "react-bootstrap/CardDeck"
+import Card from "react-bootstrap/Card"
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <Carousel>
+    <Carousel style={{paddingTop: '5vh'}}>
       {data.carouselPhotos.edges.map(image => (
         <Carousel.Item key={image.node.id}>
           <Img style={{maxHeight: '90vh'}}

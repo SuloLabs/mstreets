@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Img, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,13 +6,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import container from 'react-bootstrap/Container';
 import Container from "react-bootstrap/Container";
+import LogoImg from "../images/logo.png"
+
 //import Button from 'react-bootstrap/Button';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, data }) => (
   <header>
-    <Navbar bg="primary" expand="md" variant="dark" fixed="top">
+    <Navbar bg="primary" expand="md" variant="dark" fixed="top" style={{minHeight: '5vh'}}>
       <Container>
-        <Navbar.Brand href="/">{siteTitle}</Navbar.Brand>
+        <Navbar.Brand href="/"><img src={LogoImg} alt="" style={{maxHeight: '40px'}}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav as="ul" className="ml-auto">
@@ -37,3 +39,15 @@ Header.defaultProps = {
 }
 
 export default Header
+
+export const query = graphql`
+  query {
+    fileName: file(relativePath: { eq: "/logo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
