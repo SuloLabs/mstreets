@@ -14,7 +14,7 @@ import Card from "react-bootstrap/Card"
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <Carousel style={{paddingTop: '5vh'}}>
+    <Carousel style={{paddingTop: '5vh'}} className="d-none d-sm-block">
       {data.carouselPhotos.edges.map(image => (
         <Carousel.Item key={image.node.id}>
           <Img style={{maxHeight: '90vh'}}
