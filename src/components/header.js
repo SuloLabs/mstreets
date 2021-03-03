@@ -40,14 +40,4 @@ Header.defaultProps = {
 
 export default Header
 
-export const query = graphql`
-  query {
-    fileName: file(relativePath: { eq: "/logo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+
