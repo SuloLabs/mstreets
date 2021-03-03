@@ -56,6 +56,11 @@ const Header = ({ siteTitle, data }) => (
                 Contact
               </Link>
             </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                Management Team
+              </Link>
+            </Nav.Item>
 
             <Nav.Item as="li">
               <Link to="/page-2" className="nav-link" activeClassName="active">
