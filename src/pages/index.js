@@ -25,7 +25,7 @@ const IndexPage = ({data}) => (
     <strong>The Ultimate Urban Party - STOP EXISTING & START LIVING!</strong><br></br>
       5 Star Hotel w/Daily Breakfast -- Desert Safari with BBQ Dinner --Dubai and Abu Dhabi City Tour -- Day and Night Events -- Yacht and Pool Party
     </p>
-    <Button variant="primary">Learn more</Button>
+    <Button variant="primary" href="https://www.eventbrite.com/e/the-dubai-experience-april-1-7-2021-tickets-96656834193?aff=malachistreets">Learn more</Button>
   </Container>
 </Jumbotron>
     <Carousel className="d-none d-sm-block">
@@ -38,7 +38,7 @@ const IndexPage = ({data}) => (
           <Carousel.Caption>
             <h2>
             {image.node.base.split('-').join(' ').split('.')[0]}
-            {' '}<Button href="https://www.eventbrite.com/e/the-dubai-experience-april-1-7-2021-tickets-96656834193?aff=malachistreets">Learn More</Button>
+            {' '}<Button href="#">Learn More</Button>
             </h2>
           </Carousel.Caption>
         </Carousel.Item>  
