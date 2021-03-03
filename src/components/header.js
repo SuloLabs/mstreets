@@ -8,6 +8,14 @@ import container from 'react-bootstrap/Container';
 import Container from "react-bootstrap/Container";
 import LogoImg from "../images/logo.png"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
+
 //import Button from 'react-bootstrap/Button';
 
 const Header = ({ siteTitle, data }) => (
@@ -20,9 +28,57 @@ const Header = ({ siteTitle, data }) => (
           <Nav as="ul" className="ml-auto">
             <Nav.Item as="li">
               <Link to="/page-2" className="nav-link" activeClassName="active">
-                Page 2
+                About Me
               </Link>
             </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                News
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                Events
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                Store
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                Blog
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+                Contact
+              </Link>
+            </Nav.Item>
+
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+              <FontAwesomeIcon icon={faYoutube} size="1x" />
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+              <FontAwesomeIcon icon={faFacebook} size="1x" />
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+              <FontAwesomeIcon icon={faTwitter} size="1x" />
+              </Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Link to="/page-2" className="nav-link" activeClassName="active">
+              <FontAwesomeIcon icon={faInstagram} size="1x" />
+              </Link>
+            </Nav.Item>
+
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
